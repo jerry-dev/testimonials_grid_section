@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed&family=Oswald&display=swap");
+
 :root {
     --purple-1: #733FC8;
     --purple-2: #A775F1;
@@ -61,21 +63,40 @@ article {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 28px;
+
 }
 
 .testimonial > .testimonial-container > .endorser-block > img {
     width: 28px;
     height: 28px;
     margin-right: 17px;
-    margin-bottom: 18px;
     border-radius: 50px;
-    outline: 2px solid var(--purple-2);
+    border: 2px solid var(--purple-2);
+}
+
+
+.endorser-block-details {
+    margin: 0;
 }
 
 .endorser-block-details-name {
+    color: var(--white-1);
+    font-size: 13px;
     line-height: var(--text-area-height-1);
     margin: 0;
     margin-bottom: 4px;
+}
+
+.endorser-block-details-status {
+    color: var(--purple-2);
+    font-size: 13px;
+    line-height: var(--text-area-height-1);
+    margin: 0;
+}
+
+.endorser-block-details-name, .endorser-block-details-status {
+    font-family: var(--font-set-1);   
 }
 
 .testimonial > .testimonial-container >  h2 {
@@ -86,6 +107,7 @@ article {
 
 .testimonial > .testimonial-container >  blockquote {
     color: var(--purple-2);
+    font-family: var(--font-set-1);
     margin: 0;
 }
 
