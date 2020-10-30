@@ -11,17 +11,15 @@
     --blue-1: #ECF2F8;
     --blue-2: #48556A;
     --black-1: #19202D;
-    --gutters-1: 30px;
+    --mobile-gutters-1: 24px;
+    --desktop-gutters-1: 30px;
     --text-area-height-1: 13px;
     --text-area-height-2: 11px;
     --text-area-height-3: 24px;
     --text-area-height-4: 18px;
+    --margin-1: 24px;
+    --margin-2: 32px;
 }
-
-/*
-    The second endorser block has the color #979797
-    associated to it, but it isn't actually visible.
-*/
 
 html {
     height: 100%;
@@ -35,26 +33,26 @@ html {
 body {
     min-height: 100%;
     margin: 0;
-    margin-top: 70.5px;
-    padding-left: 165px;
-    padding-right: 165px;
     background-color: var(--blue-1);
 }
 
 #app-wrapper {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 327px;
+    margin-top: 71px;
+    margin-left: var(--margin-1);
+    margin-right: var(--margin-1);
+    margin-bottom: 71px;
 }
 
 #testimonial-group {
     display: grid;
-    grid-template-columns: repeat(12, 65px);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: var(--gutters-1);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: var(--mobile-gutters-1);
 }
 
 .testimonial {
+    grid-column: 1 / -1;
     border-radius: 8px;
     margin: 0;
     padding: 0;
@@ -63,9 +61,9 @@ body {
 
 .testimonial-container {
     margin-top: 26px;
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-bottom: 32px;
+    margin-left: var(--margin-2);
+    margin-right: var(--margin-2);
+    margin-bottom: var(--margin-2);
 }
 
 .endorser-block {
@@ -111,6 +109,7 @@ body {
 
 .testimonial > .testimonial-container >  h2 {
     max-width: 476px;
+    line-height: var(--text-area-height-3);
     color: var(--white-1);
     font-size: var(--font-size-2);
     font-family: var(--font-set-1);
@@ -131,13 +130,15 @@ body {
 }
 
 #testimonial1 {
-    grid-column: span 6;
-    grid-row: 1;
     background-color: var(--purple-1);
     background-image: url("../assets/images/bg-pattern-quotation.svg");
     background-repeat: no-repeat;
-    background-position: right 90px top;
+    background-position: right 24px top;
     background-size: 104px 102px;
+}
+
+#testimonial1 > .testimonial-container >  blockquote {
+    margin-right: 16px;
 }
 
 #testimonial1 > .testimonial-container > .endorser-block > img {
@@ -145,14 +146,11 @@ body {
 }
 
 #testimonial2 {
-    grid-column: span 3;
-    grid-row: 1;
     background-color: var(--blue-2);
 }
 
 #testimonial3 {
-    grid-column: span 3;
-    grid-row: span 2;
+    grid-row: 5;
     background-color: var(--white-1);
 }
 
@@ -172,8 +170,6 @@ body {
 }
 
 #testimonial4 {
-    grid-column: span 3;
-    grid-row: 2;
     background-color: var(--white-1);
 }
 
@@ -188,10 +184,51 @@ body {
 }
 
 #testimonial5 {
-    grid-column: span 6;
     background-color: var(--black-1);
 }
 
 #testimonial5 > .testimonial-container > .endorser-block > img {
     border: 2px solid var(--purple-2);
+}
+
+@media (min-width: 1440px) {
+    
+    #app-wrapper {
+        max-width: 1110px;
+        margin-top: 70.5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #testimonial-group {
+        display: grid;
+        grid-template-columns: repeat(12, 65px);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: var(--desktop-gutters-1);
+    }
+
+    #testimonial1 {
+        grid-column: span 6;
+        grid-row: 1;
+        background-position: right 90px top;
+    }
+       
+    #testimonial2 {
+        grid-column: span 3;
+        grid-row: 1;
+    }
+    
+    #testimonial3 {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+    
+    #testimonial4 {
+        grid-column: span 3;
+        grid-row: 2;
+    }
+    
+    #testimonial5 {
+        grid-column: span 6;
+    }
 }
