@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Barlow+Semi+Condensed&family=Oswald&display=swap");
 
 :root {
-    --purple-1: #733FC8;
+    /* --purple-1: #733FC8; */
+    --purple-1: hsl(263, 55%, 52%);
     --purple-2: #A775F1;
-    --gray-1: #CFCFCF;
+    /* --gray-1: #CFCFCF; */
+    --gray-1: hsl(0, 0%, 81%);
     --white-1: #FFFFFF;
     --font-size-1: 13px;
     --font-size-2: 20px;
     --font-set-1: "Barlow Semi Condensed";
     --blue-1: #ECF2F8;
+    --blue-1: hsl(210, 46%, 95%);
     --blue-2: #48556A;
-    --black-1: #19202D;
+    /* --black-1: #19202D; */
+    --black-1: hsl(219, 29%, 14%);
     --mobile-gutters-1: 24px;
     --desktop-gutters-1: 30px;
     --text-area-height-1: 13px;
@@ -34,6 +38,7 @@ body {
     min-height: 100%;
     margin: 0;
     background-color: var(--blue-1);
+    font-size: var(--font-size-1);
 }
 
 #app-wrapper {
@@ -122,7 +127,6 @@ body {
     max-width: 476px;
     line-height: var(--text-area-height-4);
     color: var(--gray-1);
-    font-size: var(--font-size-1);
     font-family: var(--font-set-1);
     margin: 0;
     opacity: 0.7;
